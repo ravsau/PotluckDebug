@@ -6,22 +6,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Food {
+public class FoodPotluck {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id; 
 	
-	private String name;
+	private String personName;
 	private String food;
-	
-	public long getId() {
-		return id;
+
+	public String getPersonName() {
+		return personName;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
+	public void setPersonName(String personName) {
+		this.personName = personName;
 	}
 	public String getFood() {
 		return food;
@@ -29,6 +26,11 @@ public class Food {
 	public void setFood(String food) {
 		this.food = food;
 	}
+	public long getId() {
+		return id;
+	}
+	
+	
 
 	
 	

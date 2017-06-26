@@ -1,7 +1,7 @@
 <!DOCTYPE html >
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8"/>
 <title>Insert title here</title>
 </head>
 <body>
@@ -12,12 +12,14 @@
   <table>
   
   <tr>
+    <th>Id</th>
   <th>Name</th>
   <th>Food</th>
   
   </tr>
   <tr th:each = "food:${list}">
-  	<td th:text="${food.name}"/>
+   	<td th:text="${food.id}"/>
+  	<td th:text="${food.personName}"/>
   	<td th:text="${food.food}"/>
   
   
@@ -26,7 +28,8 @@
   
   </table>
    
-   
+   <a href="/delete"> Delete a person from the list</a>
+    <a href="/foodlist"> Add a new  person to the list</a>
    
    
    
