@@ -1,0 +1,26 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+
+   <h1> Welcome to the potluck food List page. Enter the food you want to bring</h1>
+   
+   
+   <form action="#" th:action="@{/foodlist}" th:object="${listfood}" method="post">
+   
+   <p> Name:<input type="text" th:field="*{name}" /> </p>
+   <p> Food You'll Bring <input type="text" th:field="*{food}" /> </p>
+   
+   <input type="submit" value="Submit"/>
+   
+   
+   
+   
+   
+   </form>
+
+</body>
+</html>

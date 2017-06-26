@@ -1,0 +1,36 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+   <h1> Here's the list of Who's Bringing What</h1>
+   
+   
+  <table>
+  
+  <tr>
+  <th>Name</th>
+  <th>Food</th>
+  
+  </tr>
+  <tr th:each = "food:${list}">
+  	<td th:text="${food.name}"/>
+  	<td th:text="${food.food}"/>
+  
+  
+  
+  </tr>
+  
+  </table>
+   
+   
+   
+   
+   
+   
+
+</body>
+</html>
